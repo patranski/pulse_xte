@@ -1,0 +1,7 @@
+gfortran -g -c -fno-range-check fftfit.f fccf.f get_channels.f local_ftgkns.f len_used.f istrpos.f bindes2chan.f des2chan.f  printerror.f choose_channels.f brent.f cprof.f cprof2.f fftconv.f ffft.f shiftbyfft.f 
+
+gcc -g -c pulse_xte_presto.c ppolyco.c mpolyco.c  toa_stds.c gcf.c gser.c gammln.c nrutil.c
+
+ln -s /usr/lib/x86_64-linux-gnu/libelf-0.165.so
+
+gfortran  -g -Wall -o pulse_xte_presto pulse_xte_presto.o  ppolyco.o mpolyco.o toa_stds.o fftfit.o fccf.o get_channels.o local_ftgkns.o len_used.o istrpos.o bindes2chan.o des2chan.o printerror.o choose_channels.o brent.o cprof.o cprof2.o fftconv.o ffft.o shiftbyfft.o gammln.o gcf.o gser.o nrutil.o  libcfitsio.a -lm -lc
